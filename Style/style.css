@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: #100000;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* header */
+
+header {
+    position: relative;
+    height: 80vh;
+    background: linear-gradient(to bottom, #000 5%, transparent), url('../Img/bg1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+header i {
+    color: #E62B1E;
+}
+
+header .card {
+    position: absolute;
+    background: #E62B1E;
+    width: 22rem;
+    top: 30%;
+    right: 10%;
+    border: 0;
+    padding: 1rem;
+}
+
+
+/* map */
+
+iframe {
+    width: 100%;
+}
+
+
+/* empty section */
+
+section {
+    height: 350px;
+    background-color: inherit;
+}
+
+
+/* button */
+
+.btn-main {
+    padding: 14px 18px;
+    background-color: #E62B1E;
+    color: #fff;
+    border-radius: 2px;
+    outline: none;
+    border: 0;
+    margin: 0 20px;
+}
+
+.btn-main:hover {
+    background-color: #d6291c;
+    transition: .5s;
+}
+
+.btn-sec {
+    padding: 14px 18px;
+    background-color: rgb(255, 255, 255);
+    color: #111;
+    border-radius: 2px;
+    outline: none;
+    border: 0;
+    margin: 1.4rem auto .5rem auto;
+}
+
+.btn-sec:hover {
+    background-color: #f0f0f0;
+    transition: .5s;
+}
+
+
+/* navbar */
+
+nav {
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: #fff;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 17px;
+    padding-bottom: 6px;
+    text-decoration: none !important;
+    border-bottom: 3px solid transparent;
+}
+
+dl,
+ol,
+ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+a.active,
+a:hover {
+    border-bottom: 3px solid #E62B1E;
+    transition: .5s;
+    color: #fff !important;
+}
+
+
+/* navbar toggle */
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+/* form */
+
+header .form-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 32px;
+    padding: auto;
+    color: #fff;
+}
+
+header .main i {
+    font-size: 32px;
+    color: #fff;
+}
+
+header input {
+    margin: .5rem auto;
+    color: #fff !important;
+    background: rgba(255, 255, 255, .4) !important;
+    border: 0 !important;
+}
+
+footer {
+    position: relative;
+    z-index: 99;
+}
+
+
+/* cta */
+
+.cta {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: #fff;
+    width: 26rem;
+    background-color: #100000;
+    border-radius: 6px;
+}
+
+
+/* media queries */
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 26px;
+        padding-left: 30px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    ol,
+    ul {
+        padding-left: 0 !important;
+    }
+    dl,
+    ol,
+    ul {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    header .card {
+        position: unset;
+        width: 80%;
+        top: 0;
+        border: 0;
+        margin: 0 auto;
+    }
+    header {
+        height: 98vh;
+    }
+    header .head {
+        text-align: center;
+        margin: auto;
+    }
+    header .my-5 {
+        margin-top: .2rem !important;
+        margin-bottom: 2rem !important;
+    }
+    header .x {
+        display: none;
+    }
+    .cta {
+        top: 10%;
+        width: 60%;
+    }
+}
+
+@media (max-width: 858px) {
+    label.logo {
+        display: none;
+    }
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #100000;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        z-index: 999 !important;
+        left: -100%;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px 0;
+        line-height: 25px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a.active,
+    a:hover {
+        border-bottom: 2px solid #E62B1E;
+        transition: .5s;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    nav {
+        z-index: 9999;
+    }
+    .cta {
+        top: -12%;
+        width: 80%;
+        height: 16rem;
+    }
+}
